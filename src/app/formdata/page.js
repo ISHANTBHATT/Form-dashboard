@@ -225,7 +225,7 @@ import Link from "next/link";
 import { useAuth } from "../context/AuthContext";
 import Loader from "../Components/Loader";
 
-function page() {
+function Page() {
   const { isAuthenticated, user } = useAuth();
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
@@ -481,4 +481,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

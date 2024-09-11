@@ -227,7 +227,7 @@ import { useAuth } from "../context/AuthContext";
 import Loader from "../Components/Loader";
 import { sendContactForm } from "../lib/api";
 
-function page() {
+function Page() {
   const { isAuthenticated, user } = useAuth();
   const router = useRouter();
   const [loading, setLoading] = useState(true);
@@ -511,4 +511,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

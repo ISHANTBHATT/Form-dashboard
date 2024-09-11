@@ -4,7 +4,7 @@ import { useAuth } from "../context/AuthContext";
 import Loader from "../Components/Loader";
 import { useRouter } from "next/navigation";
 
-function page() {
+function Page() {
   const { logout, isAuthenticated, user } = useAuth();
   const router = useRouter();
   function handleClick() {
@@ -42,4 +42,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

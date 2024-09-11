@@ -66,15 +66,14 @@ const AuthContext = createContext();
 export function AuthProvider({ children }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true); // To track loading during hydration
-
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     if (typeof window !== "undefined") {
       const authState = localStorage.getItem("isAuthenticated") === "true";
       const storedUser = JSON.parse(localStorage.getItem("user"));
       setUser(storedUser);
       setIsAuthenticated(authState);
-      setLoading(false); // Hydration complete
+      setLoading(false);
     }
   }, []);
 
