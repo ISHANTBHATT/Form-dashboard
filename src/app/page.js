@@ -124,9 +124,9 @@ export default function Home() {
   useEffect(() => {
     if (!isAuthenticated) {
       // window.location.href = "/login";
-      router.push("/login");
+      router.push("login");
     } else {
-      router.push("/NonVerifiedForm");
+      router.push("NonVerifiedForm");
     }
   }, [isAuthenticated]);
 
